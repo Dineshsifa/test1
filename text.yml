@@ -1,1 +1,11 @@
 ---
+- hosts: win
+  gather facts: no
+  tasks:
+   - name: create directory on remote windows server
+     win_file:
+       path: 'D:\windows ansible'
+       state: directory
+     register: task_results
+  
+   
